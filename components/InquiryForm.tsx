@@ -36,6 +36,7 @@ export function InquiryForm({ caregiverName, className }: InquiryFormProps) {
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    const form = event.currentTarget;
     const formData = new FormData(event.currentTarget);
     const name = formData.get("name")?.toString().trim();
     const email = formData.get("email")?.toString().trim();
@@ -87,7 +88,7 @@ export function InquiryForm({ caregiverName, className }: InquiryFormProps) {
 
       setStatus("success");
       setMessage("You're all set. Available Irvine caregivers typically respond within 24 hours.");
-      event.currentTarget.reset();
+      form.reset();
       setServiceType("");
       setFrequency("");
       setContactMethod("SMS");
