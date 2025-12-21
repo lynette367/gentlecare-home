@@ -21,11 +21,12 @@ const contactMethods = [
 ];
 
 interface InquiryFormProps {
+  id?: string;
   caregiverName?: string;
   className?: string;
 }
 
-export function InquiryForm({ caregiverName, className }: InquiryFormProps) {
+export function InquiryForm({ id, caregiverName, className }: InquiryFormProps) {
   const [serviceType, setServiceType] = useState("");
   const [frequency, setFrequency] = useState("");
   const [contactMethod, setContactMethod] = useState("SMS");
@@ -101,6 +102,7 @@ export function InquiryForm({ caregiverName, className }: InquiryFormProps) {
 
   return (
     <form
+      id={id}
       onSubmit={handleSubmit}
       className={cn(
         "rounded-3xl bg-white/95 p-6 shadow-soft backdrop-blur",
@@ -254,7 +256,7 @@ export function InquiryForm({ caregiverName, className }: InquiryFormProps) {
       </p>
       <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
         <Button type="submit" size="lg" className="w-full sm:w-auto" disabled={status === "loading"}>
-          {status === "loading" ? "Sending..." : "Send my inquiry"}
+          {status === "loading" ? "Sending..." : "Get My Instant Quote"}
         </Button>
         {message && (
           <p

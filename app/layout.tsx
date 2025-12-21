@@ -10,7 +10,11 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "Irvine Home Cleaning & Babysitting | GentleCare",
+  metadataBase: new URL("https://gentlecare-home.com"),
+  title: {
+    default: "Irvine Home Cleaning & Babysitting | GentleCare",
+    template: "%s | GentleCare",
+  },
   description:
     "GentleCare Home connects Irvine and Orange County families with trusted home cleaners and babysitters. Hire caregivers directly without agency fees.",
   openGraph: {
@@ -18,7 +22,32 @@ export const metadata: Metadata = {
     description:
       "Discover trustworthy Irvine and Orange County caregivers for everyday home life through a simple referral request.",
     type: "website",
+    locale: "en_US",
+    siteName: "GentleCare Home",
   },
+  alternates: {
+    canonical: "/",
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: "GentleCare Home",
+  description:
+    "Connecting Irvine and Orange County families with trusted home cleaners and babysitters. Direct hire, no agency fees.",
+  url: "https://gentlecare-home.com",
+  areaServed: {
+    "@type": "City",
+    name: "Irvine",
+  },
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Irvine",
+    addressRegion: "CA",
+    addressCountry: "US",
+  },
+  priceRange: "$$",
 };
 
 export default function RootLayout({
@@ -37,6 +66,10 @@ export default function RootLayout({
           <main className="flex-1">{children}</main>
           <Footer />
         </div>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
       </body>
     </html>
   );

@@ -1,109 +1,104 @@
 import type { Metadata } from "next";
 import { Hero } from "@/components/Hero";
+import { ServiceAreaMap } from "@/components/ServiceAreaMap";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Card } from "@/components/Card";
-import { InquiryForm } from "@/components/InquiryForm";
 import { Badge } from "@/components/Badge";
 
 export const metadata: Metadata = {
-  title: "Irvine Home Cleaning & Babysitting | GentleCare",
+  title: "Irvine’s Most Reliable Home Cleaning Service | GentleCare",
   description:
-    "Book trusted home cleaners and babysitters in Irvine, California. Orange County families hire directly with no agency fees.",
+    "Book professional, background-checked cleaners in Irvine, CA. 100% Satisfaction Guaranteed. See your price and get an instant quote in 60 seconds.",
+  alternates: {
+    canonical: "/",
+  },
 };
 
 const steps = [
   {
-    title: "Submit your needs",
-    description: "Share your zip, timing, and whether you need cleaning or babysitting.",
+    title: "Instant Quote",
+    description: "Share your zip and cleaning needs to see your price immediately.",
   },
   {
-    title: "We alert local caregivers",
-    description: "A small pool of vetted Irvine caregivers is notified right away.",
+    title: "Vetted Professional",
+    description: "A background-checked, local Irvine professional is assigned to your home.",
   },
   {
-    title: "They contact you directly",
-    description: "You hear from available caregivers within 24 hours and hire them yourself.",
+    title: "100% Satisfaction",
+    description: "Enjoy a sparkling home with our satisfaction guarantee. Easy, direct billing.",
   },
 ];
 
 const trustPoints = [
   {
-    title: "Local and vetted",
-    text: "Only Irvine and nearby Orange County caregivers who have verified experience get notified.",
+    title: "Licensed & Insured",
+    text: "Your home is protected. We are fully bonded, licensed, and insured for your peace of mind.",
   },
   {
-    title: "Direct hiring, no fees",
-    text: "You speak, decide, and pay caregivers directly. GentleCare never charges families or manages contracts.",
+    title: "Local Irvine Team",
+    text: "We aren't a national chain. Our cleaners live in and love the Irvine neighborhoods they serve.",
   },
   {
-    title: "Fast replies",
-    text: "Most inquiries get a first response within one day so you can plan confidently.",
+    title: "Eco-friendly Products",
+    text: "Safe for kids, pets, and the planet. We use premium non-toxic cleaning solutions.",
   },
 ];
 
 const stories = [
   {
     quote:
-      "Taylor set up a calm bedtime rhythm for our two kids and checked in after every visit. Woodbridge feels lighter.",
+      "The best cleaning service in Woodbury. They handled our move-in cleaning perfectly and with so much care.",
     author: "The Sloane family, Irvine",
   },
   {
     quote:
-      "We submitted the form and heard from two cleaners within a day. The Northwood townhouse sparkles without a subscription fee.",
+      "Finally a service that's reliable and local. Our Northwood home has never looked better. Highly recommend!",
     author: "Aria & Daniel, Irvine",
   },
 ];
 
 export default function Home() {
   return (
-    <div className="space-y-20 pb-24">
+    <div className="pb-24">
       <Hero />
+      <ServiceAreaMap />
 
-      <section className="bg-shell/60 py-16">
+      <section className="bg-shell/30 py-24">
         <div className="mx-auto max-w-6xl px-4">
           <SectionHeader
             eyebrow="How it works"
-            title="One request, quick matches"
-            description="Submit your needs and local caregivers will reach out directly — no browsing or comparing required."
+            title="A cleaner home in three simple steps"
+            description="Our process is designed to be fast, transparent, and completely stress-free."
           />
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
+          <div className="mt-16 grid gap-8 md:grid-cols-3">
             {steps.map((step, index) => (
-              <Card key={step.title} className="h-full bg-white/95">
-                <Badge variant="lilac" className="mb-3 text-xs">
+              <Card key={step.title} className="group relative h-full bg-white transition-all hover:shadow-xl">
+                <Badge variant="lilac" className="mb-4 text-xs font-bold uppercase tracking-widest">
                   Step {index + 1}
                 </Badge>
-                <h3 className="text-lg font-semibold text-ink">{step.title}</h3>
-                <p className="mt-2 text-sm text-muted">{step.description}</p>
+                <h3 className="text-xl font-bold text-ink">{step.title}</h3>
+                <p className="mt-4 text-muted">{step.description}</p>
               </Card>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="bg-moss/10 py-16" id="inquiry">
-        <div className="mx-auto max-w-5xl px-4">
+      <section className="py-24">
+        <div className="mx-auto max-w-6xl px-4">
           <SectionHeader
-            eyebrow="Ready when you are"
-            title="Share your Irvine needs in two minutes"
-            description="Available local caregivers will contact you directly after submission. No accounts, no platform hoops."
+            eyebrow="Trust & Safety"
+            title="Your home is in safe hands"
+            description="We prioritize safety and quality above all else, ensuring every visit is perfect."
           />
-          <InquiryForm className="mt-10" />
-        </div>
-      </section>
-
-      <section className="mx-auto max-w-6xl px-4">
-        <SectionHeader
-          eyebrow="Trust & Safety"
-          title="Built for fast, confident hires"
-          description="Clear expectations and direct conversations keep families in control from the start."
-        />
-        <div className="mt-10 grid gap-6 md:grid-cols-3">
-          {trustPoints.map((point) => (
-            <Card key={point.title} className="bg-white/95">
-              <h3 className="text-lg font-semibold text-ink">{point.title}</h3>
-              <p className="mt-3 text-sm text-muted">{point.text}</p>
-            </Card>
-          ))}
+          <div className="mt-16 grid gap-8 md:grid-cols-3">
+            {trustPoints.map((point) => (
+              <Card key={point.title} className="bg-white p-8">
+                <h3 className="text-xl font-bold text-ink">{point.title}</h3>
+                <p className="mt-4 text-muted leading-relaxed">{point.text}</p>
+              </Card>
+            ))}
+          </div>
         </div>
       </section>
 
