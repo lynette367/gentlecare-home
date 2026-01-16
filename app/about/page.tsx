@@ -38,7 +38,7 @@ export default function AboutPage() {
         <SectionHeader
           eyebrow="About"
           title="A listing platform built for calm homes"
-          description="GentleCare Home started after hearing from parents who wanted an easier, more tender way to find trustworthy caregiving partners."
+          description="GerishCare Home started after hearing from parents who wanted an easier, more tender way to find trustworthy caregiving partners."
         />
         <div className="grid gap-6 md:grid-cols-3">
           {values.map((value) => (
@@ -52,7 +52,7 @@ export default function AboutPage() {
           eyebrow="Trust & safety"
           align="left"
           title="How we support both sides"
-          description="GentleCare is not the employer, but we provide tools so everyone can collaborate with clarity."
+          description="GerishCare is not the employer, but we provide tools so everyone can collaborate with clarity."
         />
         <div className="grid gap-6 md:grid-cols-3">
           {trust.map((item) => (

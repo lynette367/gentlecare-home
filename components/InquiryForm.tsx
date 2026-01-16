@@ -96,7 +96,7 @@ export function InquiryForm({ id, caregiverName, className }: InquiryFormProps) 
     } catch (error) {
       console.error(error);
       setStatus("error");
-      setMessage("Something went wrong. Please try again or email hello@gentlecare.example");
+      setMessage("Something went wrong. Please try again or email hello@gerish.xyz");
     }
   }
 
@@ -113,9 +113,9 @@ export function InquiryForm({ id, caregiverName, className }: InquiryFormProps) 
         <p className="text-sm font-semibold uppercase tracking-[0.2em] text-muted">
           Start here
         </p>
-        <h3 className="text-2xl font-semibold text-ink">Submit an inquiry</h3>
+        <h3 className="text-2xl font-semibold text-ink">Check Pricing for My Irvine Home</h3>
         <p className="text-sm text-muted">
-          Caregivers will contact you directly. GentleCare does not employ caregivers.
+          Caregivers will contact you directly. GerishCare does not employ caregivers.
         </p>
         <p className="text-sm font-semibold text-moss">
           Free to request. No obligation. No fees.
@@ -127,43 +127,55 @@ export function InquiryForm({ id, caregiverName, className }: InquiryFormProps) 
         )}
       </div>
       <div className="grid gap-4 md:grid-cols-2">
-        <label className="space-y-1 text-sm font-medium text-ink">
-          Full name*
+        <div className="space-y-1">
+          <label htmlFor="full-name" className="text-sm font-medium text-ink">
+            Full name*
+          </label>
           <input
+            id="full-name"
             name="name"
             required
             className="w-full rounded-2xl border border-ink/10 bg-shell px-4 py-2 text-base text-ink focus:border-peach focus:outline-none focus:ring-2 focus:ring-peach/40"
             placeholder="Your name"
           />
-        </label>
-        <label className="space-y-1 text-sm font-medium text-ink">
-          Email*
+        </div>
+        <div className="space-y-1">
+          <label htmlFor="email" className="text-sm font-medium text-ink">
+            Email*
+          </label>
           <input
+            id="email"
             type="email"
             name="email"
             required
             className="w-full rounded-2xl border border-ink/10 bg-shell px-4 py-2 text-base text-ink focus:border-peach focus:outline-none focus:ring-2 focus:ring-peach/40"
             placeholder="you@email.com"
           />
-        </label>
-        <label className="space-y-1 text-sm font-medium text-ink">
-          Phone*
+        </div>
+        <div className="space-y-1">
+          <label htmlFor="phone" className="text-sm font-medium text-ink">
+            Phone*
+          </label>
           <input
+            id="phone"
             name="phone"
             required
             className="w-full rounded-2xl border border-ink/10 bg-shell px-4 py-2 text-base text-ink focus:border-peach focus:outline-none focus:ring-2 focus:ring-peach/40"
             placeholder="949-555-1234"
           />
-        </label>
-        <label className="space-y-1 text-sm font-medium text-ink">
-          Zip code*
+        </div>
+        <div className="space-y-1">
+          <label htmlFor="zip-code" className="text-sm font-medium text-ink">
+            Zip code*
+          </label>
           <input
+            id="zip-code"
             name="zip"
             required
             className="w-full rounded-2xl border border-ink/10 bg-shell px-4 py-2 text-base text-ink focus:border-peach focus:outline-none focus:ring-2 focus:ring-peach/40"
             placeholder="Irvine CA 926xx"
           />
-        </label>
+        </div>
       </div>
       <div className="mt-6 space-y-2">
         <p className="text-sm font-medium text-ink">Service type*</p>
@@ -211,15 +223,18 @@ export function InquiryForm({ id, caregiverName, className }: InquiryFormProps) 
           })}
         </div>
       </div>
-      <label className="mt-6 block space-y-1 text-sm font-medium text-ink">
-        Desired start date*
+      <div className="mt-6 space-y-1">
+        <label htmlFor="start-date" className="text-sm font-medium text-ink">
+          Desired start date*
+        </label>
         <input
+          id="start-date"
           type="date"
           name="startDate"
           required
           className="w-full rounded-2xl border border-ink/10 bg-shell px-4 py-2 text-base text-ink focus:border-peach focus:outline-none focus:ring-2 focus:ring-peach/40"
         />
-      </label>
+      </div>
       <div className="mt-4 space-y-2">
         <p className="text-sm font-medium text-ink">Preferred contact method*</p>
         <div className="flex flex-wrap gap-2">
@@ -243,16 +258,19 @@ export function InquiryForm({ id, caregiverName, className }: InquiryFormProps) 
           })}
         </div>
       </div>
-      <label className="mt-4 block space-y-1 text-sm font-medium text-ink">
-        Household notes or specifics
+      <div className="mt-4 space-y-1">
+        <label htmlFor="notes" className="text-sm font-medium text-ink">
+          Household notes or specifics
+        </label>
         <textarea
+          id="notes"
           name="notes"
           className="min-h-[90px] w-full rounded-2xl border border-ink/10 bg-shell px-4 py-3 text-base text-ink focus:border-peach focus:outline-none focus:ring-2 focus:ring-peach/40"
           placeholder="Gate code, parking details, ages of children, cleaning priorities, etc."
         />
-      </label>
+      </div>
       <p className="mt-4 text-xs text-muted">
-        GentleCare Home is a referral directory only. We do not employ, supervise, or contract caregivers. All hiring decisions, payments, and agreements are made directly between families and caregivers.
+        GerishCare Home is a referral directory only. We do not employ, supervise, or contract caregivers. All hiring decisions, payments, and agreements are made directly between families and caregivers.
       </p>
       <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
         <Button type="submit" size="lg" className="w-full sm:w-auto" disabled={status === "loading"}>

@@ -12,7 +12,7 @@ const storyList = [
     title: "Nisha, beauty caregiver",
     snippet:
       "Hosts a Thursday \"calm club\" for parents needing pick-me-up manicures before big presentations.",
-    takeaway: "GentleCare helps me keep a steady flow of respectful clients who value hygiene and rest.",
+    takeaway: "GerishCare helps me keep a steady flow of respectful clients who value hygiene and rest.",
   },
   {
     title: "River Valley roommates",

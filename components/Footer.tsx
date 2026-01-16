@@ -41,12 +41,12 @@ export function Footer() {
     <footer className="bg-shell/70">
       <div className="mx-auto grid max-w-6xl gap-8 px-4 py-10 md:grid-cols-2">
         <div className="space-y-3">
-          <p className="text-lg font-semibold text-ink">GentleCare Home</p>
+          <p className="text-lg font-semibold text-ink">GerishCare Home</p>
           <p className="text-sm text-muted">
             A gentle household caregiver referral for modern families seeking trusted help at home.
           </p>
           <p className="text-sm text-muted">
-            Email: hello@gentlecare.example
+            Email: hello@gerish.xyz
           </p>
           <div className="flex items-center gap-3">
             {socials.map((social) => (
@@ -63,7 +63,7 @@ export function Footer() {
         <div className="space-y-3 text-sm text-muted">
           <p className="font-semibold text-ink">Disclaimer</p>
           <p>
-            GentleCare Home is a referral directory only. We do not employ, supervise, or contract caregivers. All hiring decisions, payments, and agreements are made directly between families and caregivers.
+            GerishCare Home is a referral directory only. We do not employ, supervise, or contract caregivers. All hiring decisions, payments, and agreements are made directly between families and caregivers.
           </p>
           <div className="flex flex-wrap gap-4 text-ink">
             {[
@@ -79,7 +79,7 @@ export function Footer() {
         </div>
       </div>
       <div className="border-t border-ink/10 py-4 text-center text-xs text-muted">
-        © {new Date().getFullYear()} GentleCare Home. All inquiries receive a human reply within 1 business day.
+        © {new Date().getFullYear()} GerishCare Home. All inquiries receive a human reply within 1 business day.
       </div>
     </footer>
   );

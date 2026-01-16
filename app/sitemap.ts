@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 import { caregivers } from "@/data/caregivers";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://gentlecare-home.com";
+  const baseUrl = "https://www.gerish.xyz";
 
   // Static routes
   const staticRoutes: MetadataRoute.Sitemap = [
@@ -12,6 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 1,
     },
+    /* 
     {
       url: `${baseUrl}/caregivers`,
       lastModified: new Date(),
@@ -42,8 +43,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.7,
     },
+    */
   ];
 
+  /* 
   // Dynamic caregiver profile routes
   const caregiverRoutes: MetadataRoute.Sitemap = caregivers.map((caregiver) => ({
     url: `${baseUrl}/caregivers/${caregiver.id}`,
@@ -53,4 +56,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   return [...staticRoutes, ...caregiverRoutes];
+  */
+
+  return staticRoutes;
 }

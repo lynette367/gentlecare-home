@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: CaregiverPageProps) {
   const caregiver = getCaregiverById(params.id);
   if (!caregiver) return {};
   return {
-    title: `${caregiver.name} | GentleCare caregiver profile`,
+    title: `${caregiver.name} | GerishCare caregiver profile`,
     description: caregiver.about,
   };
 }
@@ -89,7 +89,7 @@ export default function CaregiverDetailPage({ params }: CaregiverPageProps) {
               <h3 className="text-lg font-semibold text-ink">A story we love</h3>
               <p className="mt-3 text-sm text-muted">{caregiver.story}</p>
               <p className="mt-4 text-xs text-muted">
-                GentleCare Home is not the employer. Reach out directly to coordinate schedules, contracts, and payments.
+                GerishCare Home is not the employer. Reach out directly to coordinate schedules, contracts, and payments.
               </p>
             </div>
             <InquiryForm caregiverName={caregiver.name} />

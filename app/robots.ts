@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
             userAgent: "*",
             allow: "/",
         },
-        sitemap: "https://gentlecare-home.com/sitemap.xml",
+        sitemap: "https://www.gerish.xyz/sitemap.xml",
     };
 }

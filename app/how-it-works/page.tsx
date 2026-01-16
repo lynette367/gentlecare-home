@@ -38,7 +38,7 @@ const caregiverSteps = [
   {
     title: "Coordinate directly",
     detail:
-      "You decide rates, schedules, and agreements with the family. GentleCare does not mediate payments.",
+      "You decide rates, schedules, and agreements with the family. GerishCare does not mediate payments.",
   },
 ];
 
@@ -49,9 +49,9 @@ const faqs = [
       "No. Families can browse profiles and submit inquiries for free. If you decide to hire someone, you pay the caregiver directly.",
   },
   {
-    question: "Are caregivers employees of GentleCare?",
+    question: "Are caregivers employees of GerishCare?",
     answer:
-      "No. Every caregiver is an independent professional or agency. GentleCare Home is only a directory.",
+      "No. Every caregiver is an independent professional or agency. GerishCare Home is only a directory.",
   },
   {
     question: "Can I request background checks?",
@@ -76,7 +76,7 @@ export default function HowItWorksPage() {
       <div className="mx-auto max-w-6xl space-y-12 px-4">
         <SectionHeader
           eyebrow="Process"
-          title="How GentleCare works"
+          title="How GerishCare works"
           description="We keep things warm, respectful, and transparent for both families and caregivers."
         />
         <section className="grid gap-6 md:grid-cols-2">

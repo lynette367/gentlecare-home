@@ -6,13 +6,22 @@ import { Card } from "@/components/Card";
 import { Badge } from "@/components/Badge";
 
 export const metadata: Metadata = {
-  title: "Irvine’s Most Reliable Home Cleaning Service | GentleCare",
+  title: "Irvine’s Most Reliable Home Cleaning Service | GerishCare",
   description:
     "Book professional, background-checked cleaners in Irvine, CA. 100% Satisfaction Guaranteed. See your price and get an instant quote in 60 seconds.",
   alternates: {
     canonical: "/",
   },
 };
+
+const neighborhoods = [
+  "Woodbury",
+  "Northwood",
+  "Turtle Ridge",
+  "Orchard Hills",
+  "Portola Springs",
+  "University Park",
+];
 
 const steps = [
   {
@@ -40,7 +49,7 @@ const trustPoints = [
   },
   {
     title: "Eco-friendly Products",
-    text: "Safe for kids, pets, and the planet. We use premium non-toxic cleaning solutions.",
+    text: "Safe for kids, pets, and the planet. We use premium non-toxic solutions for every deep cleaning services near me.",
   },
 ];
 
@@ -115,6 +124,24 @@ export default function Home() {
               <p className="mt-4 text-sm font-semibold text-muted">{story.author}</p>
             </Card>
           ))}
+        </div>
+      </section>
+
+      <section className="mt-24 border-t border-peach/10 py-12">
+        <div className="mx-auto max-w-5xl px-4 text-center">
+          <p className="text-sm text-muted">
+            Serving all Irvine neighborhoods including{" "}
+            {neighborhoods.map((n, i) => (
+              <span key={n}>
+                {n}
+                {i < neighborhoods.length - 1 ? ", " : ""}
+              </span>
+            ))}{" "}
+            and surrounding areas.
+          </p>
+          <p className="mt-4 text-sm text-muted">
+            Serving Irvine zip codes: 92602, 92603, 92604, 92606, 92612, 92614, 92617, 92618, 92620.
+          </p>
         </div>
       </section>
     </div>

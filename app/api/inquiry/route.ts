@@ -21,7 +21,7 @@ export async function POST(req: Request) {
   try {
     if (resend && notifyEmail) {
       await resend.emails.send({
-        from: "GentleCare <onboarding@resend.dev>",
+        from: "GerishCare <onboarding@resend.dev>",
         to: notifyEmail,
         subject: "New Irvine Inquiry",
         text: JSON.stringify(data, null, 2),

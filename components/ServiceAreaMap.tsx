@@ -29,10 +29,10 @@ export function ServiceAreaMap() {
                                 </div>
                                 <h2 className="text-2xl font-bold text-ink md:text-4xl">
                                     Serving all Irvine neighborhoods: <br />
-                                    <span className="text-peach">Woodbury, Northwood, Turtle Rock, and more.</span>
+                                    <span className="text-peach">Move-in / Move-out cleaning Irvine, Deep cleaning, and more.</span>
                                 </h2>
                                 <p className="text-sm font-medium text-muted md:text-base">
-                                    Our local teams are ready to serve yours. Most homes are within a 15-minute drive of our background-checked professionals.
+                                    From recurring maid service Irvine to one-time deep cleaning services near me, our local teams are ready to serve yours in Woodbury, Northwood, and beyond.
                                 </p>
                             </div>
                         </div>

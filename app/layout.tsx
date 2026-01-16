@@ -10,20 +10,20 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://gentlecare-home.com"),
+  metadataBase: new URL("https://www.gerish.xyz"),
   title: {
-    default: "Irvine Home Cleaning & Babysitting | GentleCare",
-    template: "%s | GentleCare",
+    default: "Irvine’s Most Reliable Home Cleaning Service | GerishCare",
+    template: "%s | GerishCare",
   },
   description:
-    "GentleCare Home connects Irvine and Orange County families with trusted home cleaners and babysitters. Hire caregivers directly without agency fees.",
+    "GerishCare Home connects Irvine and Orange County families with trusted home cleaners and babysitters. Hire caregivers directly without agency fees.",
   openGraph: {
-    title: "Irvine Home Cleaning & Babysitting | GentleCare",
+    title: "Irvine Home Cleaning & Babysitting | GerishCare",
     description:
       "Discover trustworthy Irvine and Orange County caregivers for everyday home life through a simple referral request.",
     type: "website",
     locale: "en_US",
-    siteName: "GentleCare Home",
+    siteName: "GerishCare Home",
   },
   alternates: {
     canonical: "/",
@@ -33,10 +33,10 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  name: "GentleCare Home",
+  name: "GerishCare Home",
   description:
     "Connecting Irvine and Orange County families with trusted home cleaners and babysitters. Direct hire, no agency fees.",
-  url: "https://gentlecare-home.com",
+  url: "https://www.gerish.xyz",
   areaServed: {
     "@type": "City",
     name: "Irvine",

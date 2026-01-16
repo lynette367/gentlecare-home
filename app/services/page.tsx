@@ -3,9 +3,9 @@ import { SectionHeader } from "@/components/SectionHeader";
 import { Card } from "@/components/Card";
 
 export const metadata: Metadata = {
-  title: "Irvine Caregiver Services | GentleCare Home",
+  title: "Irvine Caregiver Services | GerishCare Home",
   description:
-    "Explore Irvine home cleaning, babysitting, tutoring, cooking, and beauty services across Orange County. Hire caregivers directly through GentleCare.",
+    "Explore Irvine home cleaning, babysitting, tutoring, cooking, and beauty services across Orange County. Hire caregivers directly through GerishCare.",
 };
 
 const serviceBlocks = [
@@ -48,7 +48,7 @@ export default function ServicesPage() {
         <SectionHeader
           eyebrow="Services in Irvine"
           title="Our caregiving categories in Orange County"
-          description="Every caregiver sets their own pricing and schedule. GentleCare simply showcases Irvine-area talent so families can reach out directly."
+          description="Every caregiver sets their own pricing and schedule. GerishCare simply showcases Irvine-area talent so families can reach out directly."
         />
         <div className="grid gap-6 md:grid-cols-2">
           {serviceBlocks.map((service) => (
