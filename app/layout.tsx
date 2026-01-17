@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -60,6 +61,19 @@ export default function RootLayout({
       <body
         className={`${manrope.variable} bg-oat text-ink antialiased selection:bg-peach/60 selection:text-ink`}
       >
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-B18FN3J293"
+        />
+        <Script id="google-analytics">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-B18FN3J293');
+          `}
+        </Script>
         <div className="relative flex min-h-screen flex-col">
           <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-b from-peach/30 via-transparent to-transparent opacity-70" />
           <Header />
