@@ -2,9 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { Button } from "./Button";
-import { caregivers } from "@/data/caregivers";
 
-const previewCaregivers = caregivers.slice(0, 3);
 
 import { InquiryForm } from "./InquiryForm";
 

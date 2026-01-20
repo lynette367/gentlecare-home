@@ -39,11 +39,11 @@ const socials = [
 export function Footer() {
   return (
     <footer className="bg-shell/70">
-      <div className="mx-auto grid max-w-6xl gap-8 px-4 py-10 md:grid-cols-2">
+      <div className="mx-auto grid max-w-6xl gap-8 px-4 py-10 md:grid-cols-3">
         <div className="space-y-3">
           <p className="text-lg font-semibold text-ink">GerishCare Home</p>
           <p className="text-sm text-muted">
-            A gentle household caregiver referral for modern families seeking trusted help at home.
+            Professional house cleaning referral service specialized in Irvine, CA. Connecting families with vetted local cleaners for move-out and deep cleaning.
           </p>
           <p className="text-sm text-muted">
             Email: hello@gerish.xyz
@@ -61,9 +61,18 @@ export function Footer() {
           </div>
         </div>
         <div className="space-y-3 text-sm text-muted">
+          <p className="font-semibold text-ink">Service Areas</p>
+          <ul className="space-y-2">
+            <li>Irvine, CA</li>
+            <li>Tustin, CA</li>
+            <li>Newport Coast, CA</li>
+            <li>Orange County (Select Areas)</li>
+          </ul>
+        </div>
+        <div className="space-y-3 text-sm text-muted">
           <p className="font-semibold text-ink">Disclaimer</p>
           <p>
-            GerishCare Home is a referral directory only. We do not employ, supervise, or contract caregivers. All hiring decisions, payments, and agreements are made directly between families and caregivers.
+            GerishCare Home is a referral directory only. We do not employ, supervise, or contract cleaners. All hiring decisions, payments, and agreements are made directly between families and cleaners.
           </p>
           <div className="flex flex-wrap gap-4 text-ink">
             {[

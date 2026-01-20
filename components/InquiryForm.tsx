@@ -6,7 +6,6 @@ import { cn } from "@/lib/utils";
 
 const serviceTypes = [
   { value: "cleaning", label: "Cleaning" },
-  { value: "babysitting", label: "Babysitting" },
 ];
 
 const frequencyOptions = [
@@ -88,7 +87,7 @@ export function InquiryForm({ id, caregiverName, className }: InquiryFormProps) 
       }
 
       setStatus("success");
-      setMessage("You're all set. Available Irvine caregivers typically respond within 24 hours.");
+      setMessage("You're all set. Available Irvine cleaners typically respond within 24 hours.");
       form.reset();
       setServiceType("");
       setFrequency("");
@@ -115,7 +114,7 @@ export function InquiryForm({ id, caregiverName, className }: InquiryFormProps) 
         </p>
         <h3 className="text-2xl font-semibold text-ink">Check Pricing for My Irvine Home</h3>
         <p className="text-sm text-muted">
-          Caregivers will contact you directly. GerishCare does not employ caregivers.
+          Cleaners will contact you directly. GerishCare does not employ cleaners.
         </p>
         <p className="text-sm font-semibold text-moss">
           Free to request. No obligation. No fees.
@@ -270,7 +269,7 @@ export function InquiryForm({ id, caregiverName, className }: InquiryFormProps) 
         />
       </div>
       <p className="mt-4 text-xs text-muted">
-        GerishCare Home is a referral directory only. We do not employ, supervise, or contract caregivers. All hiring decisions, payments, and agreements are made directly between families and caregivers.
+        GerishCare Home is a referral directory only. We do not employ, supervise, or contract cleaners. All hiring decisions, payments, and agreements are made directly between families and cleaners.
       </p>
       <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
         <Button type="submit" size="lg" className="w-full sm:w-auto" disabled={status === "loading"}>

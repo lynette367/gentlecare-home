@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 import Script from "next/script";
+import { headers } from "next/headers";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -13,21 +14,24 @@ const manrope = Manrope({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.gerish.xyz"),
   title: {
-    default: "Irvine’s Most Reliable Home Cleaning Service | GerishCare",
+    default: "Irvine's Most Reliable Home Cleaning Service | GerishCare",
     template: "%s | GerishCare",
   },
   description:
-    "GerishCare Home connects Irvine and Orange County families with trusted home cleaners and babysitters. Hire caregivers directly without agency fees.",
+    "GerishCare Home connects Irvine and Orange County families with trusted home cleaners. Hire directly without agency fees.",
   openGraph: {
-    title: "Irvine Home Cleaning & Babysitting | GerishCare",
+    title: "Irvine Home Cleaning | GerishCare",
     description:
-      "Discover trustworthy Irvine and Orange County caregivers for everyday home life through a simple referral request.",
+      "Discover trustworthy Irvine and Orange County home cleaners for everyday home life through a simple referral request.",
     type: "website",
     locale: "en_US",
     siteName: "GerishCare Home",
   },
   alternates: {
     canonical: "/",
+    languages: {
+      "zh-CN": "/zh",
+    },
   },
 };
 
@@ -36,7 +40,7 @@ const jsonLd = {
   "@type": "LocalBusiness",
   name: "GerishCare Home",
   description:
-    "Connecting Irvine and Orange County families with trusted home cleaners and babysitters. Direct hire, no agency fees.",
+    "Connecting Irvine and Orange County families with trusted home cleaners. Direct hire, no agency fees.",
   url: "https://www.gerish.xyz",
   areaServed: {
     "@type": "City",
@@ -51,13 +55,17 @@ const jsonLd = {
   priceRange: "$$",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const headersList = await headers();
+  const pathname = headersList.get("x-pathname") || "";
+  const isChinesePage = pathname.startsWith("/zh");
+
   return (
-    <html lang="en">
+    <html lang={isChinesePage ? "zh-CN" : "en"}>
       <body
         className={`${manrope.variable} bg-oat text-ink antialiased selection:bg-peach/60 selection:text-ink`}
       >
